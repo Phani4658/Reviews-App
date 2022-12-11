@@ -1,0 +1,116 @@
+/* Write your code here */
+* {
+  margin: 0;
+  padding: 0;
+}
+.bg-container {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/reviews-bg.png');
+  height: 100vh;
+  background-size: cover;
+  padding: 1em;
+  padding-top: 10em;
+}
+.reviews-container {
+  text-align: center;
+}
+.heading {
+  color: #ffffff;
+  font-size: 3em;
+}
+.arrows-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+.arrow {
+  cursor: pointer;
+  opacity: 0;
+}
+.username {
+  color: #fff;
+  font-size: 1.3em;
+  margin-top: 0.4em;
+  font-weight: 700;
+  opacity: 0;
+}
+.review {
+  opacity: 0;
+}
+@media screen and (min-width: 762px) {
+  .arrows-container {
+    width: 40%;
+    margin: auto;
+    margin-top: 0.8em;
+  }
+  .review {
+    width: 30%;
+    margin: auto;
+  }
+}
+.company-name {
+  color: #171f46;
+  font-weight: 0.8em;
+  margin: 1em 0;
+  opacity: 0;
+}
+button {
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+/* ANIMATION */
+
+.heading {
+  animation: fade-down 1s forwards ease-in-out;
+}
+.user-image {
+  animation: fade-right 1s forwards ease-in-out;
+  opacity: 0;
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(-4em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-down {
+  0% {
+    transform: translateY(-4em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(4em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.company-name {
+  animation: fade-left 1s forwards ease-in-out 1.6s;
+}
+.review {
+  animation: fade-right 1s forwards ease-in-out 2s;
+}
+.username {
+  animation: fade-left 1s forwards ease-in-out 1.2s;
+}
+.left-arrow {
+  animation: fade-right 1s forwards ease-in-out 1.4s;
+}
+.right-arrow {
+  animation: fade-left 1s forwards ease-in-out 1.4s;
+}
